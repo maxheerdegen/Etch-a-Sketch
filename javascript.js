@@ -1,5 +1,11 @@
 function chooseSquares() {
     let numberOfSquares = +prompt("Number of squares per side? (max. 100)")
+
+    if (numberOfSquares > 100) {
+        alert("Number to high!");
+        return;
+    }
+
     while (container.firstChild) {
         container.removeChild(container.lastChild);
     }
